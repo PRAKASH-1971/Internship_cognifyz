@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <link rel="stylesheet" href="./Task1.css">
+    <title>Greeting Alert</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <p>This is a simple webpage with a heading, paragraph, and image.</p>
+            <img src="https://i.ytimg.com/vi/Aeqh8DGZTf0/hqdefault.jpg" alt="Placeholder Image">
+        </div>
+    </main>
+    <div class="form-container">
+        <form>
+            <label for="input-field">Enter Details</label>
+            <input type="text" id="input-field" >
+            <button type="submit">Submit</button>
+        </form>
+    </div> 
+
+
+    <!-- task1js -->
+    <div id="task1js">
+        <h2 >Task 1 Javascript</h2>
+        <button id="colorButton">Click Me</button>
+
+    </div>
+
+
+    <!-- Calculator -->
+    <div class="calculator">
+    <input type="number" id="num1">
+    <h1>+</h1>
+    <input type="number" id="num2">
+    <h1>=</h1>
+    <p id="result"></p>
+    <button onclick="calculate()">ADD</button>
+</div>
+
+
+
+    <script>
+        const button = document.getElementById('colorButton');
+        button.addEventListener('click', () => {
+            button.style.backgroundColor = "brown" ;
+        });
+
+
+        /* Alert */
+        const currentDate = new Date();
+        const time = currentDate.getHours();
+
+        let Alert;
+
+        if (time < 12) {
+            Alert = "Good morning!";
+        } else if (time < 18) { Alert = "Good afternoon!";
+        } else Alert = "Good evening!";
+
+        // alert(Alert);
+
+
+        /* Calculator */
+        function calculate() {
+            const num1 = parseInt(document.getElementById('num1').value);
+            const num2 = parseInt(document.getElementById('num2').value);
+            const total = num1 + num2;
+            document.getElementById('result').textContent = total;
+        }
+
+    </script>
+</body>
+</html>

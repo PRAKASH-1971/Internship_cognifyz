@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage with Hamburger Menu</title>
+  <link rel="stylesheet" href="./Task2c.css">
+</head>
+<body>
+  <header>
+    <h1>Task2 Website</h1>
+    <nav>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburgermenu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </header>
+    <p>
+      <p>Responsive ipsum dolor sit amet consectetur, adipisicing elit. Odio perferendis voluptate fugit unde pariatur quibusdam atque assumenda reiciendis at vero.</p>
+    </p>
+
+  <script >
+    /* hamburger menu */
+    const hamburgermenu = document.querySelector('.hamburgermenu');
+const navLinks = document.querySelector('.links');
+
+hamburgermenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburgermenu.classList.toggle('toggle');
+});
+
+  </script>
+</body>
+</html>
